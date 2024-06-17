@@ -1,3 +1,7 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+/* global settings */
 *,
 *::before,
 *::after {
@@ -6,5 +10,27 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* navigation */
 .navigation {
+  display: flex;
+  background-color: $bandsite-black;
+  justify-content: space-between;
+  &__links {
+    color: $mercury;
+  }
+  &__links:hover {
+    color: $white;
+  }
 }

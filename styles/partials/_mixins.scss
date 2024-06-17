@@ -1,4 +1,4 @@
-@use "variables" as *;
+/* @use "variables" as *; */
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -10,4 +10,9 @@
   @media screen and (min-width: $desktop-breakpoint) {
     @content;
   }
+}
+
+@mixin divider {
+  stroke-width: 0.1rem;
+  color: $mercury;
 }

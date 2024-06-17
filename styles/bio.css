@@ -1,7 +1,36 @@
+/* media breakpoint values */
+/* colors */
+/* @use "variables" as *; */
+/* global settings */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* navigation */
+.navigation {
+  display: flex;
+  background-color: #323232;
+  justify-content: space-between;
+}
+.navigation__links {
+  color: #e1e1e1;
+}
+.navigation__links:hover {
+  color: #ffffff;
 }/*# sourceMappingURL=bio.css.map */
