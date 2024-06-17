@@ -1,1 +1,7 @@
-/*# sourceMappingURL=bio.css.map */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=bio.css.map */
