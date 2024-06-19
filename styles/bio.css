@@ -164,6 +164,7 @@ div {
   font-weight: "Avenir Next Regular";
 }
 
+/* gallery styling */
 .gallery {
   background-color: #fafafa;
   padding: 0 1.6rem;
@@ -177,4 +178,17 @@ div {
 .gallery img {
   padding-bottom: 1.6rem;
   width: 100%;
+}
+
+/* footer styling */
+.footer {
+  padding: 0 1.6rem;
+  background-color: #323232;
+}
+.footer__title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-family: "Avenir Next bold";
+  padding: 2.4rem 0 1.6rem 0;
+  color: #ffffff;
 }/*# sourceMappingURL=bio.css.map */

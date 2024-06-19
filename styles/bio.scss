@@ -107,6 +107,7 @@
   }
 }
 
+/* gallery styling */
 .gallery {
   background-color: $alabaster;
   padding: 0 1.6rem;
@@ -117,5 +118,17 @@
   img {
     padding-bottom: 1.6rem;
     width: 100%;
+  }
+}
+
+/* footer styling */
+.footer {
+  padding: 0 1.6rem;
+  background-color: $bandsite-black;
+
+  &__title {
+    @include section-header;
+    @include mobile-heading-pad;
+    color: $white;
   }
 }
