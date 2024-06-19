@@ -42,9 +42,30 @@
 
 /* hero */
 .hero {
+  position: relative;
+  display: flex;
   background-image: url(../assets/Images/hero-bio.jpg);
-  height: 10rem;
+  height: 32rem;
   width: 100%;
   background-size: cover;
   background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(50, 50, 50, 0.5);
+    z-index: 1;
+  }
+
+  &__text {
+    margin: 0;
+    align-content: center;
+    color: $white;
+    padding-left: 2.4rem;
+    z-index: 2;
+  }
 }
