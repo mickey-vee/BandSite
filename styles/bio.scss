@@ -90,3 +90,15 @@
     @include body-copy;
   }
 }
+
+.gallery {
+  background-color: $alabaster;
+  &__title {
+    @include section-header;
+    margin: 1.6rem;
+  }
+  img {
+    padding: 0.8rem 1.6rem;
+    width: 100%;
+  }
+}
