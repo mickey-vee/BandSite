@@ -42,30 +42,18 @@ body {
   font-size: 1rem;
   font-family: "Avenir Next Regular", sans-serif;
   margin: 1.6rem;
-  margin: 0;
-  padding: 0;
 }
 
-/*   h1 {
-  font-size: 6rem;
-  line-height: 6.8rem;
-  font-family: $font-bold;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+div {
+  margin: 0;
 }
-h2 {
-  font-size: 3.6rem;
-  line-height: 4.4rem;
-  font-family: $font-bold;
-}
-h3 {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  font-family: $font-demi;
-}
-h4 {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
-  font-weight: $font-regular;
-} */
+
 /* navigation */
 .navigation {
   display: flex;
@@ -88,14 +76,21 @@ h4 {
   padding: 1.6rem 0;
 }
 .navigation-item--links {
-  margin: 0;
   color: #e1e1e1;
   font-size: 2rem;
   line-height: 3.2rem;
   font-weight: 600;
 }
+.navigation-item--links.active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: solid 0.4rem white;
+  width: 100%;
+}
 .navigation-item--links:hover {
   color: #ffffff;
+  border-bottom: solid 0.4rem white;
+  width: 100%;
 }
 
 /* hero */
@@ -129,10 +124,10 @@ h4 {
 }
 
 .about {
-  margin: 0 1.6rem;
+  padding: 0 1.6rem;
 }
 .about__title {
-  margin: 2.4rem 0 0 0;
+  padding: 2.4rem 0 0 0;
   color: #323232;
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -143,13 +138,27 @@ h4 {
   margin: 1.6rem 0;
 }
 .about__quote {
-  margin: 0;
   color: #000000;
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-family: "Avenir Next bold";
 }
-.about__text {
+.about__quote--author {
+  padding: 1.6rem 0;
+  color: #000000;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-family: "Avenir Next bold";
+}
+.about__band {
+  font-size: 4rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: "Avenir Next demi";
+  padding: 1.6rem 0;
+}
+.about__band--text {
+  padding-bottom: 1.6rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: "Avenir Next Regular";
@@ -162,7 +171,7 @@ h4 {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-family: "Avenir Next bold";
-  margin: 1.6rem;
+  padding: 1.6rem;
 }
 .gallery img {
   padding: 0.8rem 1.6rem;

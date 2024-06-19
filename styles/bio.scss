@@ -29,14 +29,21 @@
   padding: 1.6rem 0;
 
   &--links {
-    margin: 0;
     color: #e1e1e1;
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 600;
   }
+  &--links.active {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: solid 0.4rem white;
+    width: 100%;
+  }
   &--links:hover {
     color: #ffffff;
+    border-bottom: solid 0.4rem white;
+    width: 100%;
   }
 }
 
@@ -71,9 +78,9 @@
 }
 
 .about {
-  margin: 0 1.6rem;
+  padding: 0 1.6rem;
   &__title {
-    margin: 2.4rem 0 0 0;
+    padding: 2.4rem 0 0 0;
     color: $bandsite-black;
     @include page-header;
   }
@@ -82,11 +89,21 @@
     margin: 1.6rem 0;
   }
   &__quote {
-    margin: 0;
     color: $bandsite-dark-black;
     @include section-header;
   }
-  &__text {
+  &__quote--author {
+    padding: 1.6rem 0;
+    color: $bandsite-dark-black;
+    @include section-header;
+  }
+  &__band {
+    font-size: 4rem;
+    @include sub-header;
+    padding: 1.6rem 0;
+  }
+  &__band--text {
+    padding-bottom: 1.6rem;
     @include body-copy;
   }
 }
@@ -95,7 +112,7 @@
   background-color: $alabaster;
   &__title {
     @include section-header;
-    margin: 1.6rem;
+    padding: 1.6rem;
   }
   img {
     padding: 0.8rem 1.6rem;
