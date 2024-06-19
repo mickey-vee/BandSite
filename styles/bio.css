@@ -1,13 +1,31 @@
 /* media breakpoint values */
 /* colors */
-/* @use "variables" as *; */
-/* global settings */
+/* fonts */
+/* global styles */
+/* fonts */
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/Font/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next demi";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../assets/Font/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: demi;
+}
+@font-face {
+  font-family: "Avenir Next bold";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../assets/Font/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+/* global styles */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -20,17 +38,73 @@ html {
 
 body {
   font-size: 1rem;
+  font-family: "Avenir Next Regular", sans-serif;
+  margin: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 6.8rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 400;
 }
 
 /* navigation */
 .navigation {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #323232;
-  justify-content: space-between;
+  padding-top: 2.4rem;
+  width: 100%;
 }
-.navigation__links {
+.navigation__logo--image {
+  width: 18rem;
+  height: 100%;
+}
+
+.navigation-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem 0;
+}
+.navigation-item--links {
+  margin: 0;
   color: #e1e1e1;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 600;
 }
-.navigation__links:hover {
+.navigation-item--links:hover {
   color: #ffffff;
+}
+
+/* hero */
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 10rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=bio.css.map */

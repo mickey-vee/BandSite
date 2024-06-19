@@ -1,36 +1,50 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-/* global settings */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* fonts */
+@include font-stylings;
 
-a {
-  text-decoration: none;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-size: 1rem;
-}
+/* global styles */
+@include global-styles;
 
 /* navigation */
 .navigation {
   display: flex;
-  background-color: $bandsite-black;
-  justify-content: space-between;
-  &__links {
-    color: $mercury;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+  padding-top: 2.4rem;
+  width: 100%;
+  &__logo--image {
+    width: 18rem;
+    height: 100%;
   }
-  &__links:hover {
-    color: $white;
+}
+
+.navigation-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem 0;
+
+  &--links {
+    margin: 0;
+    color: #e1e1e1;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-weight: 600;
   }
+  &--links:hover {
+    color: #ffffff;
+  }
+}
+
+/* hero */
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 10rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
