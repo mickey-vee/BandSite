@@ -4,6 +4,7 @@
 /* global styles */
 /* desktop & tablet text styles */
 /* mobile text style */
+/* padding */
 /* fonts */
 @font-face {
   font-family: "Avenir Next Regular";
@@ -127,7 +128,7 @@ div {
   padding: 0 1.6rem;
 }
 .about__title {
-  padding: 2.4rem 0 0 0;
+  padding: 2.4rem 0 1.6rem 0;
   color: #323232;
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -135,16 +136,15 @@ div {
 }
 .about__image {
   width: 100%;
-  margin: 1.6rem 0;
 }
 .about__quote {
   color: #000000;
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-family: "Avenir Next bold";
+  padding: 1.6rem 0;
 }
 .about__quote--author {
-  padding: 1.6rem 0;
   color: #000000;
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -155,7 +155,7 @@ div {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-family: "Avenir Next demi";
-  padding: 1.6rem 0;
+  padding: 2.4rem 0 1.6rem 0;
 }
 .about__band--text {
   padding-bottom: 1.6rem;
@@ -166,14 +166,15 @@ div {
 
 .gallery {
   background-color: #fafafa;
+  padding: 0 1.6rem;
 }
 .gallery__title {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-family: "Avenir Next bold";
-  padding: 1.6rem;
+  padding: 2.4rem 0 1.6rem 0;
 }
 .gallery img {
-  padding: 0.8rem 1.6rem;
+  padding-bottom: 1.6rem;
   width: 100%;
 }/*# sourceMappingURL=bio.css.map */

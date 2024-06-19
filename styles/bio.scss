@@ -80,27 +80,26 @@
 .about {
   padding: 0 1.6rem;
   &__title {
-    padding: 2.4rem 0 0 0;
+    @include mobile-heading-pad;
     color: $bandsite-black;
     @include page-header;
   }
   &__image {
     width: 100%;
-    margin: 1.6rem 0;
   }
   &__quote {
     color: $bandsite-dark-black;
     @include section-header;
+    padding: 1.6rem 0;
   }
   &__quote--author {
-    padding: 1.6rem 0;
     color: $bandsite-dark-black;
     @include section-header;
   }
   &__band {
     font-size: 4rem;
     @include sub-header;
-    padding: 1.6rem 0;
+    @include mobile-heading-pad;
   }
   &__band--text {
     padding-bottom: 1.6rem;
@@ -110,12 +109,13 @@
 
 .gallery {
   background-color: $alabaster;
+  padding: 0 1.6rem;
   &__title {
     @include section-header;
-    padding: 1.6rem;
+    @include mobile-heading-pad;
   }
   img {
-    padding: 0.8rem 1.6rem;
+    padding-bottom: 1.6rem;
     width: 100%;
   }
 }
