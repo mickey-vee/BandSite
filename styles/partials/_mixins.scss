@@ -40,7 +40,7 @@
     margin: 0;
     padding: 0;
   }
-  h1 {
+  /*   h1 {
     font-size: 6rem;
     line-height: 6.8rem;
     font-family: $font-bold;
@@ -59,10 +59,10 @@
     font-size: 1.4rem;
     line-height: 2.2rem;
     font-weight: $font-regular;
-  }
+  } */
 }
 
-@mixin font-stylings {
+@mixin font-faces {
   @font-face {
     font-family: $font-regular;
     src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"),
@@ -86,4 +86,54 @@
     font-weight: 700;
     font-style: bold;
   }
+}
+
+/* desktop & tablet text styles */
+@mixin desktop-page-header {
+  font-size: 6rem;
+  line-height: 6.8rem;
+  font-family: $font-bold;
+}
+
+@mixin desktop-section-header {
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  font-family: $font-bold;
+}
+
+@mixin desktop-sub-header {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-family: $font-demi;
+}
+
+@mixin desktop-body-copy {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: $font-regular;
+}
+
+/* mobile text style */
+@mixin page-header {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-family: $font-bold;
+}
+
+@mixin section-header {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-family: $font-bold;
+}
+
+@mixin sub-header {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-family: $font-demi;
+}
+
+@mixin body-copy {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: $font-regular;
 }
