@@ -95,11 +95,11 @@ div {
   color: #e1e1e1;
   font-size: 2rem;
   line-height: 3.2rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .navigation-item--links {
-    padding-right: 6rem;
+    margin-right: 6rem;
   }
 }
 .navigation-item--links.active {
@@ -107,6 +107,11 @@ div {
   font-weight: bold;
   border-bottom: solid 0.4rem white;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .navigation-item--links.active {
+    margin-top: 5rem;
+  }
 }
 .navigation-item--links:hover {
   color: #ffffff;
@@ -161,12 +166,15 @@ div {
   }
 }
 
+/* about section */
 .about {
   padding: 0 1.6rem;
 }
 .about__title {
   padding: 2.4rem 0 1.6rem 0;
   color: #323232;
+  font-size: 4rem;
+  font-family: "Avenir Next demi";
 }
 @media screen and (min-width: 768px) {
   .about__title {

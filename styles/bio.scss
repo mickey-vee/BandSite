@@ -37,10 +37,10 @@
     color: #e1e1e1;
     font-size: 2rem;
     line-height: 3.2rem;
-    font-weight: 600;
+    font-weight: 400;
 
     @include tablet {
-      padding-right: 6rem;
+      margin-right: 6rem;
     }
   }
 
@@ -49,6 +49,9 @@
     font-weight: bold;
     border-bottom: solid 0.4rem white;
     width: 100%;
+    @include tablet {
+      margin-top: 5rem;
+    }
   }
 
   &--links:hover {
@@ -100,11 +103,14 @@
   }
 }
 
+/* about section */
 .about {
   padding: 0 1.6rem;
   &__title {
     @include mobile-heading-pad;
     color: $bandsite-black;
+    font-size: 4rem;
+    font-family: $font-demi;
     @include tablet {
       font-size: 4rem;
       font-family: $font-demi;
