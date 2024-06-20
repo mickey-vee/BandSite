@@ -16,8 +16,12 @@
   padding-top: 2.4rem;
   width: 100%;
   &__logo--image {
-    width: 100%;
-    height: 2rem;
+    @include logo-size;
+    padding-right: 8rem;
+  }
+  @include tablet {
+    flex-direction: row;
+    height: 8rem;
   }
 }
 
@@ -33,17 +37,27 @@
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 600;
+
+    @include tablet {
+      padding-right: 6rem;
+    }
   }
+
   &--links.active {
     color: #ffffff;
     font-weight: bold;
     border-bottom: solid 0.4rem white;
     width: 100%;
   }
+
   &--links:hover {
     color: #ffffff;
     border-bottom: solid 0.4rem white;
     width: 100%;
+  }
+
+  @include tablet {
+    justify-content: flex-start;
   }
 }
 
@@ -52,10 +66,14 @@
   position: relative;
   display: flex;
   background-image: url(../assets/Images/hero-bio.jpg);
-  height: 32rem;
+  height: 28rem;
   width: 100%;
   background-size: cover;
   background-position: center;
+
+  @include tablet {
+    height: 46rem;
+  }
 
   &::before {
     content: "";
@@ -68,12 +86,16 @@
     z-index: 1;
   }
 
-  &__text {
+  &__title {
     align-content: center;
     color: $white;
     padding-left: 1.6rem;
     @include page-header;
     z-index: 2;
+    @include tablet {
+      padding-left: 3.6rem;
+      @include desktop-page-header;
+    }
   }
 }
 
@@ -82,28 +104,50 @@
   &__title {
     @include mobile-heading-pad;
     color: $bandsite-black;
-    @include page-header;
+    @include tablet {
+      font-size: 4rem;
+      font-family: $font-demi;
+      @include desktop-heading-pad;
+    }
   }
   &__image {
     width: 100%;
+    @include tablet {
+      padding: 0 6rem;
+    }
   }
   &__quote {
     color: $bandsite-dark-black;
     @include section-header;
     padding: 1.6rem 0;
+    @include tablet {
+      padding: 3.2rem 6rem 2.4rem 6rem;
+    }
   }
   &__quote--author {
     color: $bandsite-dark-black;
     @include section-header;
+    @include tablet {
+      padding: 0 6rem;
+    }
   }
   &__band {
-    font-size: 4rem;
+    @include tablet {
+      padding: 0 6rem;
+    }
     @include sub-header;
     @include mobile-heading-pad;
   }
   &__band--text {
     padding-bottom: 1.6rem;
     @include body-copy;
+    @include tablet {
+      padding: 3.6rem 6rem;
+      display: flex;
+    }
+  }
+  @include tablet {
+    padding: 0 3.6rem;
   }
 }
 
@@ -112,7 +156,7 @@
   background-color: $alabaster;
   padding: 0 1.6rem;
   &__title {
-    @include section-header;
+    @include page-header;
     @include mobile-heading-pad;
   }
   img {
@@ -125,10 +169,41 @@
 .footer {
   padding: 0 1.6rem;
   background-color: $bandsite-black;
+  color: $white;
+  position: relative;
 
   &__title {
-    @include section-header;
+    font-size: 3.4rem;
+    font-family: $font-demi;
     @include mobile-heading-pad;
-    color: $white;
+  }
+  &__company-name {
+    @include sub-header;
+    @include mobile-heading-pad;
+  }
+  &__company-details {
+    @include body-copy;
+  }
+  &__company-email {
+    @include body-copy;
+    padding-top: 1.6rem;
+  }
+  &__logo {
+    @include logo-size;
+    position: absolute;
+    bottom: 7.5rem;
+    left: 0;
+    padding-left: 1.6rem;
+  }
+
+  &__icon {
+    height: 3.5rem;
+    padding-right: 4.5rem;
+    left: 0px;
+  }
+
+  &__copyright {
+    font-size: 1.6rem;
+    padding: 12rem 0 2.4rem 0;
   }
 }
