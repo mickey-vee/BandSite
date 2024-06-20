@@ -290,6 +290,24 @@ div {
   font-family: "Avenir Next demi";
   padding: 2.4rem 0 1.6rem 0;
 }
+@media screen and (min-width: 768px) {
+  .footer__title {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.8rem 0 2.4rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__companies {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .footer__company-name {
   font-size: 2rem;
   line-height: 2.2rem;
@@ -314,6 +332,11 @@ div {
   left: 0;
   padding-left: 1.6rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: unset;
+  }
+}
 .footer__icon {
   height: 3.5rem;
   padding-right: 4.5rem;
@@ -322,4 +345,14 @@ div {
 .footer__copyright {
   font-size: 1.6rem;
   padding: 12rem 0 2.4rem 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding: 5.6rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 3.2rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

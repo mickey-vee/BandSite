@@ -204,7 +204,27 @@
     font-size: 3.4rem;
     font-family: $font-demi;
     @include mobile-heading-pad;
+
+    @include tablet {
+      padding: 0;
+    }
   }
+
+  &__contact {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      @include desktop-heading-pad;
+    }
+  }
+
+  &__companies {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__company-name {
     @include sub-header;
     @include mobile-heading-pad;
@@ -222,6 +242,9 @@
     bottom: 7.5rem;
     left: 0;
     padding-left: 1.6rem;
+    @include tablet {
+      position: unset;
+    }
   }
 
   &__icon {
@@ -233,5 +256,13 @@
   &__copyright {
     font-size: 1.6rem;
     padding: 12rem 0 2.4rem 0;
+
+    @include tablet {
+      padding: 5.6rem 0;
+    }
+  }
+
+  @include tablet {
+    padding: 0 3.2rem;
   }
 }
