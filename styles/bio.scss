@@ -161,10 +161,33 @@
   &__title {
     @include page-header;
     @include mobile-heading-pad;
+
+    @include tablet {
+      @include desktop-heading-pad;
+    }
   }
+
+  &__images {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
   img {
     padding-bottom: 1.6rem;
     width: 100%;
+
+    @include tablet {
+      width: 31.5%;
+      box-sizing: border-box;
+      height: auto;
+    }
+  }
+
+  @include tablet {
+    padding: 0 3.2rem 3.2rem 3.2rem;
   }
 }
 
