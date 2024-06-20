@@ -229,6 +229,8 @@ div {
   .about__band--text {
     padding: 3.6rem 6rem;
     display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
   }
 }
 @media screen and (min-width: 768px) {

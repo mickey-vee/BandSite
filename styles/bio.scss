@@ -147,6 +147,8 @@
     @include tablet {
       padding: 3.6rem 6rem;
       display: flex;
+      justify-content: space-between;
+      gap: 3.2rem;
     }
   }
   @include tablet {
