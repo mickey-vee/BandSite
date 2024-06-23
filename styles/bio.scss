@@ -176,7 +176,7 @@
     @include sub-header;
     @include mobile-heading-pad;
     @include desktop {
-      padding: 4rem 10rem 2rem 10rem;
+      padding: 8rem 10rem 5rem 10rem;
       font-size: 3.5rem;
     }
   }
@@ -188,11 +188,13 @@
       display: flex;
       justify-content: space-between;
       gap: 3.2rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
     }
     @include desktop {
       padding: 0 10rem;
-      font-size: 2.8rem;
-      line-height: 4rem;
+      font-size: 2rem;
+      line-height: 3rem;
     }
   }
   @include tablet {

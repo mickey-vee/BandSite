@@ -271,7 +271,7 @@ div {
 }
 @media screen and (min-width: 1280px) {
   .about__band {
-    padding: 4rem 10rem 2rem 10rem;
+    padding: 8rem 10rem 5rem 10rem;
     font-size: 3.5rem;
   }
 }
@@ -287,13 +287,15 @@ div {
     display: flex;
     justify-content: space-between;
     gap: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__band--text {
     padding: 0 10rem;
-    font-size: 2.8rem;
-    line-height: 4rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
