@@ -176,7 +176,8 @@
     @include sub-header;
     @include mobile-heading-pad;
     @include desktop {
-      padding: 4rem 20rem 2rem 20rem;
+      padding: 4rem 10rem 2rem 10rem;
+      font-size: 3.5rem;
     }
   }
   &__band--text {
@@ -190,6 +191,8 @@
     }
     @include desktop {
       padding: 0 10rem;
+      font-size: 2.8rem;
+      line-height: 4rem;
     }
   }
   @include tablet {
@@ -256,6 +259,9 @@
       padding: 0;
       font-size: 3.5rem;
     }
+    @include desktop {
+      font-size: 4.8rem;
+    }
   }
 
   &__contact {
@@ -265,7 +271,7 @@
       @include desktop-heading-pad;
     }
     @include desktop {
-      gap: 17.5rem;
+      gap: 10rem;
       justify-content: flex-start;
     }
   }
@@ -301,6 +307,11 @@
     @include tablet {
       position: unset;
     }
+    @include desktop {
+      position: absolute;
+      left: 80%;
+      bottom: 80%;
+    }
   }
 
   &__icon {
@@ -323,6 +334,6 @@
   }
 
   @include desktop {
-    padding: 0 12rem 3.2rem 12rem;
+    padding: 0 12rem;
   }
 }

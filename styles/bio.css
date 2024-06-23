@@ -271,7 +271,8 @@ div {
 }
 @media screen and (min-width: 1280px) {
   .about__band {
-    padding: 4rem 20rem 2rem 20rem;
+    padding: 4rem 10rem 2rem 10rem;
+    font-size: 3.5rem;
   }
 }
 .about__band--text {
@@ -291,6 +292,8 @@ div {
 @media screen and (min-width: 1280px) {
   .about__band--text {
     padding: 0 10rem;
+    font-size: 2.8rem;
+    line-height: 4rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -366,6 +369,11 @@ div {
     font-size: 3.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__title {
+    font-size: 4.8rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer__contact {
     display: flex;
@@ -375,7 +383,7 @@ div {
 }
 @media screen and (min-width: 1280px) {
   .footer__contact {
-    gap: 17.5rem;
+    gap: 10rem;
     justify-content: flex-start;
   }
 }
@@ -420,6 +428,13 @@ div {
     position: unset;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__logo {
+    position: absolute;
+    left: 80%;
+    bottom: 80%;
+  }
+}
 .footer__icon {
   height: 3.5rem;
   padding-right: 4.5rem;
@@ -441,6 +456,6 @@ div {
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    padding: 0 12rem 3.2rem 12rem;
+    padding: 0 12rem;
   }
 }/*# sourceMappingURL=bio.css.map */
