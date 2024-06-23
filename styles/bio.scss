@@ -226,9 +226,14 @@
     }
   }
 
-  img {
+  &__img {
     padding-bottom: 1.6rem;
     width: 100%;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+      transition: all ease-in-out 0.2s;
+    }
 
     @include tablet {
       width: 31.5%;
@@ -300,6 +305,11 @@
     @include body-copy;
     padding-top: 1.6rem;
   }
+
+  &__company-email-link {
+    color: $white;
+  }
+
   &__logo {
     @include logo-size;
     position: absolute;

@@ -331,12 +331,17 @@ div {
     justify-content: space-between;
   }
 }
-.gallery img {
+.gallery__img {
   padding-bottom: 1.6rem;
   width: 100%;
+  filter: grayscale(100%);
+}
+.gallery__img:hover {
+  filter: grayscale(0%);
+  transition: all ease-in-out 0.2s;
 }
 @media screen and (min-width: 768px) {
-  .gallery img {
+  .gallery__img {
     width: 31.5%;
     box-sizing: border-box;
     height: auto;
@@ -417,6 +422,9 @@ div {
   line-height: 2.8rem;
   font-weight: "Avenir Next Regular";
   padding-top: 1.6rem;
+}
+.footer__company-email-link {
+  color: #ffffff;
 }
 .footer__logo {
   height: 2.8rem;
