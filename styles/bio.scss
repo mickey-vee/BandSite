@@ -24,6 +24,10 @@
     height: 8rem;
     padding: 0 8rem 0 3.2rem;
   }
+  @include desktop {
+    height: 10rem;
+    padding-left: 10rem;
+  }
 }
 
 .navigation-item {
@@ -38,6 +42,7 @@
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
+    transition: 0.1s;
 
     @include tablet {
       margin-right: 6rem;
@@ -79,6 +84,10 @@
     height: 46rem;
   }
 
+  @include desktop {
+    height: 75rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -100,6 +109,10 @@
       padding-left: 3.6rem;
       @include desktop-page-header;
     }
+    @include desktop {
+      padding-left: 12rem;
+      font-size: 8rem;
+    }
   }
 }
 
@@ -116,11 +129,17 @@
       font-family: $font-demi;
       @include desktop-heading-pad;
     }
+    @include desktop {
+      font-size: 5rem;
+    }
   }
   &__image {
     width: 100%;
     @include tablet {
       padding: 0 6rem;
+    }
+    @include desktop {
+      padding: 0 10rem;
     }
   }
   &__quote {
@@ -129,6 +148,12 @@
     padding: 1.6rem 0;
     @include tablet {
       padding: 3.2rem 6rem 1.5rem 6rem;
+    }
+    @include desktop {
+      padding: 3rem 10rem;
+      font-size: 2.8rem;
+      line-height: 4rem;
+      width: 85%;
     }
   }
   &__quote--author {
@@ -139,6 +164,10 @@
       font-size: 1.8rem;
       font-family: $font-demi;
     }
+    @include desktop {
+      padding: 0 10rem;
+      font-size: 2.4rem;
+    }
   }
   &__band {
     @include tablet {
@@ -146,6 +175,9 @@
     }
     @include sub-header;
     @include mobile-heading-pad;
+    @include desktop {
+      padding: 4rem 20rem 2rem 20rem;
+    }
   }
   &__band--text {
     padding-bottom: 1.6rem;
@@ -156,9 +188,15 @@
       justify-content: space-between;
       gap: 3.2rem;
     }
+    @include desktop {
+      padding: 0 10rem;
+    }
   }
   @include tablet {
     padding: 0 3.6rem;
+  }
+  @include desktop {
+    padding: 0 12rem;
   }
 }
 
@@ -197,6 +235,9 @@
   @include tablet {
     padding: 0 3.2rem 3.2rem 3.2rem;
   }
+  @include desktop {
+    padding: 0 12rem 3.2rem 12rem;
+  }
 }
 
 /* footer styling */
@@ -213,6 +254,7 @@
 
     @include tablet {
       padding: 0;
+      font-size: 3.5rem;
     }
   }
 
@@ -222,12 +264,20 @@
       justify-content: space-between;
       @include desktop-heading-pad;
     }
+    @include desktop {
+      gap: 17.5rem;
+      justify-content: flex-start;
+    }
   }
 
   &__companies {
     @include tablet {
       display: flex;
       justify-content: space-between;
+    }
+    @include desktop {
+      gap: 10rem;
+      justify-content: flex-start;
     }
   }
 
@@ -270,5 +320,9 @@
 
   @include tablet {
     padding: 0 3.2rem;
+  }
+
+  @include desktop {
+    padding: 0 12rem 3.2rem 12rem;
   }
 }
