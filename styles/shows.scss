@@ -9,9 +9,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+  padding: 1.6rem;
   flex-direction: column;
-  background-image: url(../assets/Images/hero-bio.jpg);
-  height: 28rem;
+  background-image: url(../assets/Images/hero-shows.jpg);
+  height: 50rem;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -39,9 +40,8 @@
 
   &__album {
     color: $white;
-    font-size: 2rem;
-    padding: 1.6rem 0;
-    z-index: 2;
+    font-size: 3rem;
+    z-index: 1;
     @include tablet {
       padding-left: 3.6rem;
       @include desktop-page-header;
@@ -55,8 +55,9 @@
   &__title {
     color: $white;
     width: 70%;
+    padding: 4rem 0;
     @include page-header;
-    z-index: 2;
+    z-index: 1;
     @include tablet {
       padding-left: 3.6rem;
       @include desktop-page-header;
@@ -65,5 +66,14 @@
       padding-left: 12rem;
       font-size: 8rem;
     }
+  }
+  &__music {
+    max-height: 30rem;
+    z-index: 1;
+  }
+  &__iframe {
+    width: 100%;
+    border-radius: 0.3rem;
+    border: none;
   }
 }
