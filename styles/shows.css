@@ -23,4 +23,78 @@
   src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../assets/Font/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
   font-style: bold;
+}
+/* hero */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 28rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding-left: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 46rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 75rem;
+  }
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
+.hero__album {
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 1.6rem 0;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .hero__album {
+    padding-left: 3.6rem;
+    font-size: 6rem;
+    line-height: 6.8rem;
+    font-family: "Avenir Next bold";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__album {
+    padding-left: 12rem;
+    font-size: 8rem;
+  }
+}
+.hero__title {
+  color: #ffffff;
+  width: 70%;
+  font-size: 4rem;
+  font-family: "Avenir Next demi";
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    padding-left: 3.6rem;
+    font-size: 6rem;
+    line-height: 6.8rem;
+    font-family: "Avenir Next bold";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 12rem;
+    font-size: 8rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
