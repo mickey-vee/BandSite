@@ -1,6 +1,9 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+/* fonts */
+@include font-faces;
+
 /* hero */
 .hero {
   position: relative;
