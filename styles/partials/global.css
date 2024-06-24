@@ -1,0 +1,132 @@
+/* media breakpoint values */
+/* colors */
+/* fonts */
+/* global styles */
+/* desktop & tablet text styles */
+/* mobile text style */
+/* padding */
+/* global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Avenir Next Regular", sans-serif;
+  margin: 0 1.6rem;
+  /*     @include desktop {
+    margin: auto;
+  } */
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0 3.6rem;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+div {
+  margin: 0;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/Font/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next demi";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../assets/Font/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: demi;
+}
+@font-face {
+  font-family: "Avenir Next bold";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../assets/Font/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+/* navigation */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+  padding-top: 2.4rem;
+  width: 100%;
+}
+.navigation__logo--image {
+  height: 2.8rem;
+  padding-right: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    height: 8rem;
+    padding: 0 8rem 0 3.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navigation {
+    height: 10rem;
+    padding-left: 10rem;
+  }
+}
+
+.navigation-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem 0;
+}
+.navigation-item--links {
+  color: #e1e1e1;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  transition: 0.1s;
+}
+@media screen and (min-width: 768px) {
+  .navigation-item--links {
+    margin-right: 6rem;
+  }
+}
+.navigation-item--links.active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: solid 0.4rem white;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .navigation-item--links.active {
+    margin-top: 5rem;
+  }
+}
+.navigation-item--links:hover {
+  color: #ffffff;
+  border-bottom: solid 0.4rem white;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .navigation-item {
+    justify-content: flex-start;
+  }
+}/*# sourceMappingURL=global.css.map */
