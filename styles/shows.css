@@ -105,6 +105,17 @@
 }
 .hero__iframe {
   width: 100%;
-  border-radius: 0.3rem;
   border: none;
+}
+
+.shows {
+  padding-left: 1.6rem;
+}
+.shows__title {
+  font-size: 4rem;
+  font-family: "Avenir Next demi";
+  padding: 4rem 0;
+}
+.shows__list {
+  padding: 0;
 }/*# sourceMappingURL=shows.css.map */

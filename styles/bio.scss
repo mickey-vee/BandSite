@@ -184,6 +184,63 @@
   }
 }
 
+/* comments styling */
+.comments {
+  &__title {
+    padding-left: 1.6rem;
+    @include page-header;
+  }
+  &__wrapper {
+    padding: 1.6rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  &__image {
+    background-image: url("../assets/images/Mohan-muruge.jpg");
+    margin-top: 1.6rem;
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  &__item {
+    width: 39rem;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    color: $silver;
+  }
+
+  &__name,
+  &__text {
+    width: 100%;
+    border: 1px solid $silver;
+    border-radius: 0.5rem;
+    margin: 1rem 0 2rem 0;
+    background-color: $alabaster;
+    padding: 1rem;
+    color: $bandsite-black;
+  }
+
+  &__button {
+    width: 100%;
+    height: 5rem;
+    background-color: $bandsite-black;
+    border-radius: 0.5rem;
+    color: $white;
+    font-family: $font-demi;
+    font-size: 2rem;
+    &:hover {
+      background-color: $bandsite-black;
+      cursor: pointer;
+    }
+  }
+}
+
 /* footer styling */
 .footer {
   padding: 0 1.6rem;

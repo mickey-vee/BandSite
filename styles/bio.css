@@ -251,6 +251,57 @@
   }
 }
 
+/* comments styling */
+.comments__title {
+  padding-left: 1.6rem;
+  font-size: 4rem;
+  font-family: "Avenir Next demi";
+}
+.comments__wrapper {
+  padding: 1.6rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.comments__image {
+  background-image: url("../assets/images/Mohan-muruge.jpg");
+  margin-top: 1.6rem;
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.comments__item {
+  width: 39rem;
+}
+.comments__label {
+  text-transform: uppercase;
+  color: #afafaf;
+}
+.comments__name, .comments__text {
+  width: 100%;
+  border: 1px solid #afafaf;
+  border-radius: 0.5rem;
+  margin: 1rem 0 2rem 0;
+  background-color: #fafafa;
+  padding: 1rem;
+  color: #323232;
+}
+.comments__button {
+  width: 100%;
+  height: 5rem;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-family: "Avenir Next demi";
+  font-size: 2rem;
+}
+.comments__button:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
 /* footer styling */
 .footer {
   padding: 0 1.6rem;

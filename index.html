@@ -134,6 +134,44 @@
       </div>
     </section>
 
+    <!-- comments -->
+    <section class="comments">
+      <p class="comments__title">Join the Conversation</p>
+      <div class="comments__wrapper">
+        <div class="comments__image"></div>
+        <div>
+          <form id="form" action="" method="POST">
+            <div class="comments__item">
+              <label class="comments__label" for="name">Name</label>
+              <input
+                class="comments__name"
+                type="text"
+                id="name"
+                name="user_name"
+                placeholder="Enter your name"
+              />
+            </div>
+
+            <div class="comments__item">
+              <label class="comments__label" for="comment">Comment</label>
+              <textarea
+                class="comments__text"
+                id="comment"
+                name="user_comment"
+                placeholder="Add a new comment"
+              ></textarea>
+            </div>
+
+            <div class="comments__item">
+              <button id="add-comment" class="comments__button" type="submit">
+                COMMENT
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- footer -->
     <footer class="footer">
       <section class="footer__contact">
