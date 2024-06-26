@@ -285,8 +285,18 @@
   border-radius: 0.5rem;
   margin: 1rem 0 2rem 0;
   background-color: #fafafa;
-  padding: 1rem;
+  padding: 1.5rem;
   color: #323232;
+}
+.comments__name::-moz-placeholder, .comments__text::-moz-placeholder {
+  color: #323232;
+  font-family: "Avenir Next Regular";
+  font-size: 1.8rem;
+}
+.comments__name::placeholder, .comments__text::placeholder {
+  color: #323232;
+  font-family: "Avenir Next Regular";
+  font-size: 1.8rem;
 }
 .comments__button {
   width: 100%;

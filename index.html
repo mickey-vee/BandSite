@@ -140,7 +140,7 @@
       <div class="comments__wrapper">
         <div class="comments__image"></div>
         <div>
-          <form id="form" action="" method="POST">
+          <form id="form">
             <div class="comments__item">
               <label class="comments__label" for="name">Name</label>
               <input
@@ -158,12 +158,14 @@
                 class="comments__text"
                 id="comment"
                 name="user_comment"
+                rows="6"
+                cols="30"
                 placeholder="Add a new comment"
               ></textarea>
             </div>
 
             <div class="comments__item">
-              <button id="add-comment" class="comments__button" type="submit">
+              <button type="submit" class="comments__button" id="add-comment">
                 COMMENT
               </button>
             </div>

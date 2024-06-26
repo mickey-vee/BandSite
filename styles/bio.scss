@@ -222,8 +222,13 @@
     border-radius: 0.5rem;
     margin: 1rem 0 2rem 0;
     background-color: $alabaster;
-    padding: 1rem;
+    padding: 1.5rem;
     color: $bandsite-black;
+    &::placeholder {
+      color: $bandsite-black;
+      font-family: $font-regular;
+      font-size: 1.8rem;
+    }
   }
 
   &__button {
