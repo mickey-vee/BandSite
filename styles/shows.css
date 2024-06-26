@@ -109,13 +109,32 @@
 }
 
 .shows {
-  padding-left: 1.6rem;
+  padding: 1.6rem;
 }
 .shows__title {
   font-size: 4rem;
   font-family: "Avenir Next demi";
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 .shows__list {
   padding: 0;
+  font-size: 1.5rem;
+}
+.shows__list-item {
+  padding: 1rem 0;
+  color: #afafaf;
+  font-family: "Avenir Next demi";
+}
+.shows__button {
+  width: 100%;
+  height: 5rem;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-family: "Avenir Next demi";
+  font-size: 2rem;
+}
+.shows__button:hover {
+  background-color: #323232;
+  cursor: pointer;
 }/*# sourceMappingURL=shows.css.map */
