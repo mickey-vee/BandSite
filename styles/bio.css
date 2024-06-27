@@ -260,20 +260,21 @@
 .comments__wrapper {
   padding: 1.6rem;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+  max-width: 100%;
+  justify-content: space-between;
 }
 .comments__image {
   background-image: url("../assets/images/Mohan-muruge.jpg");
   margin-top: 1.6rem;
+  margin-right: 1.5rem;
   width: 5rem;
   height: 5rem;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
 }
-.comments__item {
-  width: 39rem;
+.comments__form-box {
+  width: 88%;
 }
 .comments__label {
   text-transform: uppercase;
