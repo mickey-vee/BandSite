@@ -43,30 +43,51 @@ const elementClassAppend = (element, className, parentElement) => {
   parentElement.appendChild(newElement);
 };
 
+/* function to create new element, add class name, add text and append */
+const elementClassTextAppend = (element, className, text, parentElement) => {
+  const newElement = document.createElement(element);
+  newElement.classList.add(className);
+  newElement.textContent = text;
+  parentElement.appendChild(newElement);
+};
+
 const commentSection = document.querySelector(".comments");
+
+console.log(commentSection);
 
 commentArray.forEach(function (comment) {
   const comments = document.createElement("div");
   comments.classList.add("comments__wrapper");
 
-  /*   const commentImage = document.createElement("div");
+  const commentImage = document.createElement("div");
   commentImage.classList.add("comments__old-image");
-  comments.appendChild(commentImage); */
+  comments.appendChild(commentImage);
 
-  const commentImage = elementClassAppend(
-    "div",
-    "comments__old-image",
-    comments
-  );
-
-  /*   const commentOld = document.createElement("div");
+  const commentOld = document.createElement("div");
   commentOld.classList.add("comments__old-wrapper");
-  comments.appendChild(commentOld); */
+  comments.appendChild(commentOld);
 
-  const commentOld = elementClassAppend(
-    "div",
-    "comments__old-wrapper",
-    comments
+  const commentNameDate = document.createElement("div");
+  commentNameDate.classList.add("comments__name-date");
+  commentOld.appendChild(commentNameDate);
+
+  elementClassTextAppend(
+    "h4",
+    "comments__old-name",
+    comment.Name,
+    commentNameDate
+  );
+  elementClassTextAppend(
+    "h4",
+    "comments__old-date",
+    comment.Date,
+    commentNameDate
+  );
+  elementClassTextAppend(
+    "p",
+    "comments__old-text",
+    comment.Comment,
+    commentOld
   );
 
   commentSection.appendChild(comments);
