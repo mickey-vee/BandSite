@@ -255,9 +255,19 @@
 .comments {
   padding: 1.6rem;
 }
+@media screen and (min-width: 768px) {
+  .comments {
+    padding: 5rem 10rem;
+  }
+}
 .comments__title {
   font-size: 4rem;
   font-family: "Avenir Next demi";
+}
+@media screen and (min-width: 768px) {
+  .comments__title {
+    margin-left: -6.8rem;
+  }
 }
 .comments__wrapper {
   padding: 1.6rem 0;
@@ -301,7 +311,13 @@
   font-family: "Avenir Next Regular";
   font-size: 1.8rem;
 }
-.comments__button {
+@media screen and (min-width: 768px) {
+  .comments__button {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.comments__submit {
   width: 100%;
   height: 5rem;
   background-color: #323232;
@@ -310,9 +326,14 @@
   font-family: "Avenir Next demi";
   font-size: 2rem;
 }
-.comments__button:hover {
+.comments__submit:hover {
   background-color: #323232;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .comments__submit {
+    width: 30%;
+  }
 }
 .comments__old-image {
   background-color: #e1e1e1;

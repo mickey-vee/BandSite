@@ -92,19 +92,3 @@ commentArray.forEach(function (comment) {
 
   commentSection.appendChild(comments);
 });
-
-/*    <div class="comments__wrapper">
-        <div class="comments__old-image"></div>
-        <div class="comments__old-wrapper">
-          <div class="comments__name-date">
-            <h4 class="comments__old-name">Jane Doe</h4>
-            <h4 class="comments__old-date">10/20/23</h4>
-          </div>
-          <p class="comments__old-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            ducimus qui necessitatibus adipisci iusto, minima repellendus ullam
-            impedit dignissimos amet harum placeat magnam fugit corrupti dolorem
-            quos officiis voluptates! Enim.
-          </p>
-        </div>
-      </div> */
