@@ -91,6 +91,40 @@
     padding-bottom: 2rem;
     border-bottom: 0.3rem solid $mercury;
     width: 100%;
+
+    @include tablet {
+      display: flex;
+      gap: 12rem;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:active {
+      background-color: $silver;
+    }
+
+    &:hover {
+      background-color: $alabaster;
+      cursor: pointer;
+    }
+  }
+
+  &__list1 {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      width: 60%;
+      gap: 20rem;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+    }
   }
 
   &__list-date,
@@ -99,18 +133,30 @@
     padding: 1rem 0;
     color: $silver;
     font-family: $font-demi;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
   }
 
   &__list-date--text {
     font-family: $font-demi;
     color: $bandsite-black;
     padding: 1.5rem 0 2rem 0;
+    @include desktop {
+      width: 18rem;
+    }
   }
 
   &__list--text {
     color: $bandsite-black;
     font-family: $font-regular;
     padding: 1.5rem 0 2rem 0;
+    @include desktop {
+      width: 18rem;
+    }
   }
 
   &__button {
@@ -124,6 +170,13 @@
     &:hover {
       background-color: $bandsite-black;
       cursor: pointer;
+    }
+    @include tablet {
+      width: 20%;
+    }
+
+    @include desktop {
+      width: 20%;
     }
   }
 }

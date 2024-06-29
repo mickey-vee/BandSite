@@ -123,20 +123,76 @@
   border-bottom: 0.3rem solid #e1e1e1;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .shows__list {
+    display: flex;
+    gap: 12rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.shows__list:active {
+  background-color: #afafaf;
+}
+.shows__list:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.shows__list1 {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__list1 {
+    display: flex;
+    width: 60%;
+    gap: 20rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__list1 {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
 .shows__list-date, .shows__list-venue, .shows__list-location {
   padding: 1rem 0;
   color: #afafaf;
   font-family: "Avenir Next demi";
+}
+@media screen and (min-width: 768px) {
+  .shows__list-date, .shows__list-venue, .shows__list-location {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__list-date, .shows__list-venue, .shows__list-location {
+    display: none;
+  }
 }
 .shows__list-date--text {
   font-family: "Avenir Next demi";
   color: #323232;
   padding: 1.5rem 0 2rem 0;
 }
+@media screen and (min-width: 1280px) {
+  .shows__list-date--text {
+    width: 18rem;
+  }
+}
 .shows__list--text {
   color: #323232;
   font-family: "Avenir Next Regular";
   padding: 1.5rem 0 2rem 0;
+}
+@media screen and (min-width: 1280px) {
+  .shows__list--text {
+    width: 18rem;
+  }
 }
 .shows__button {
   width: 100%;
@@ -150,4 +206,14 @@
 .shows__button:hover {
   background-color: #323232;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .shows__button {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__button {
+    width: 20%;
+  }
 }/*# sourceMappingURL=shows.css.map */

@@ -1,13 +1,3 @@
-/* add show section to js */
-const showSection = document.querySelector(".shows");
-
-/* creating show title */
-const showTitle = document.createElement("h2");
-showTitle.classList.add("shows__title");
-showTitle.textContent = "Shows";
-showSection.appendChild(showTitle);
-
-/* show details array */
 const showArray = [
   {
     showDate: "Mon Sept 09 2024",
@@ -41,44 +31,38 @@ const showArray = [
   },
 ];
 
-showArray.forEach(function (shows) {
+const showSection = document.querySelector(".shows");
+
+/* function to create new element, add class name, add text and append */
+const elementClassTextAppend = (element, className, text, parentElement) => {
+  const newElement = document.createElement(element);
+  newElement.classList.add(className);
+  newElement.textContent = text;
+  parentElement.appendChild(newElement);
+};
+
+/* function to create show section */
+showArray.forEach(function (show) {
   const showList = document.createElement("ul");
   showList.classList.add("shows__list");
 
-  const showListDate = document.createElement("li");
-  showListDate.classList.add("shows__list-date");
-  showListDate.textContent = "DATE";
-  showList.appendChild(showListDate);
-
-  const showListDates = document.createElement("li");
-  showListDates.classList.add("shows__list-date--text");
-  showListDates.textContent = shows.showDate;
-  showListDate.appendChild(showListDates);
-
-  const showListVenue = document.createElement("li");
-  showListVenue.classList.add("shows__list-venue");
-  showListVenue.textContent = "VENUE";
-  showList.appendChild(showListVenue);
-
-  const showListVenues = document.createElement("li");
-  showListVenues.classList.add("shows__list--text");
-  showListVenues.textContent = shows.showVenue;
-  showListVenue.appendChild(showListVenues);
-
-  const showListLocation = document.createElement("li");
-  showListLocation.classList.add("shows__list-location");
-  showListLocation.textContent = "LOCATION";
-  showList.appendChild(showListLocation);
-
-  const showListLocations = document.createElement("li");
-  showListLocations.classList.add("shows__list--text");
-  showListLocations.textContent = shows.showLocation;
-  showListLocation.appendChild(showListLocations);
-
-  const showButton = document.createElement("button");
-  showButton.classList.add("shows__button");
-  showButton.textContent = "BUY TICKETS";
-  showList.appendChild(showButton);
+  elementClassTextAppend("li", "shows__list-date", "DATE", showList);
+  elementClassTextAppend(
+    "li",
+    "shows__list-date--text",
+    show.showDate,
+    showList
+  );
+  elementClassTextAppend("li", "shows__list-venue", "VENUE", showList);
+  elementClassTextAppend("li", "shows__list--text", show.showVenue, showList);
+  elementClassTextAppend("li", "shows__list-location", "LOCATION", showList);
+  elementClassTextAppend(
+    "li",
+    "shows__list--text",
+    show.showLocation,
+    showList
+  );
+  elementClassTextAppend("button", "shows__button", "BUY TICKETS", showList);
 
   showSection.appendChild(showList);
 });

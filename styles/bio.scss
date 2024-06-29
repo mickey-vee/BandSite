@@ -187,15 +187,15 @@
 /* comments styling */
 
 .comments {
+  padding: 1.6rem;
   &__title {
-    padding-left: 1.6rem;
     @include page-header;
   }
   &__wrapper {
-    padding: 1.6rem;
+    padding: 1.6rem 0;
     display: flex;
     max-width: 100%;
-    justify-content: space-between;
+    border-bottom: 0.3rem solid $mercury;
   }
 
   &__image {
@@ -246,6 +246,40 @@
       background-color: $bandsite-black;
       cursor: pointer;
     }
+  }
+
+  &__old-image {
+    background-color: $mercury;
+    margin-top: 1.2rem;
+    margin-right: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  &__old-wrapper {
+    width: 88%;
+  }
+  &__name-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__old-name {
+    @include sub-header;
+    padding: 1.5rem 0;
+  }
+  &__old-date {
+    font-size: 2rem;
+    font-weight: 200;
+
+    padding: 1.5rem 0;
+    color: $silver;
+  }
+  &__old-text {
+    @include body-copy;
   }
 }
 
