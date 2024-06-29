@@ -192,10 +192,17 @@
   @include tablet {
     padding: 5rem 10rem;
   }
+  @include desktop {
+    padding: 8rem 25rem;
+  }
+
   &__title {
     @include page-header;
     @include tablet {
       margin-left: -6.8rem;
+    }
+    @include desktop {
+      margin-left: -12.8rem;
     }
   }
   &__wrapper {
@@ -223,6 +230,11 @@
   &__label {
     text-transform: uppercase;
     color: $silver;
+    font-family: $font-demi;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
   }
 
   &__name,
@@ -266,7 +278,7 @@
 
   &__old-image {
     background-color: $mercury;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
     margin-right: 1.5rem;
     width: 5rem;
     height: 5rem;
@@ -285,13 +297,13 @@
 
   &__old-name {
     @include sub-header;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
   &__old-date {
     font-size: 2rem;
     font-weight: 200;
 
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     color: $silver;
   }
   &__old-text {
