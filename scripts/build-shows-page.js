@@ -32,6 +32,7 @@ const showArray = [
 ];
 
 const showSection = document.querySelector(".shows");
+const showWrapper = document.querySelector(".shows__wrapper");
 
 /* function to create new element, add class name, add text and append */
 const elementClassTextAppend = (element, className, text, parentElement) => {
@@ -64,5 +65,5 @@ showArray.forEach(function (show) {
   );
   elementClassTextAppend("button", "shows__button", "BUY TICKETS", showList);
 
-  showSection.appendChild(showList);
+  showWrapper.appendChild(showList);
 });

@@ -36,10 +36,11 @@
 
   @include desktop {
     height: 75rem;
-    padding: 0;
+    padding: 0 12rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__text {
@@ -88,7 +89,7 @@
       height: 20rem;
     }
     @include desktop {
-      width: 50rem;
+      width: 42rem;
     }
   }
 }
@@ -96,6 +97,23 @@
 .shows {
   padding: 1.6rem;
   font-size: 2rem;
+
+  @include tablet {
+    padding: 0 3.2rem;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 12rem;
+  }
+
+  &__wrapper {
+    @include desktop {
+      width: 70%;
+    }
+  }
 
   &__title {
     @include page-header;
@@ -110,7 +128,9 @@
 
     @include tablet {
       display: flex;
-      gap: 12rem;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      align-items: center;
     }
 
     @include desktop {
@@ -133,14 +153,27 @@
 
     @include tablet {
       display: flex;
-      width: 60%;
-      gap: 20rem;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      align-items: center;
     }
     @include desktop {
       display: flex;
       justify-content: space-between;
-      width: 60%;
+      padding: 5rem 0 2rem 0;
     }
+  }
+
+  &__list-date1,
+  &__list-venue1,
+  &__list-location1 {
+    color: $silver;
+    width: 18rem;
+  }
+
+  &__blank {
+    visibility: hidden;
+    width: 20rem;
   }
 
   &__list-date,
@@ -152,15 +185,16 @@
     @include tablet {
       display: none;
     }
-    @include desktop {
-      display: none;
-    }
   }
 
   &__list-date--text {
     font-family: $font-demi;
     color: $bandsite-black;
     padding: 1.5rem 0 2rem 0;
+    @include tablet {
+      width: 18rem;
+      padding: 0;
+    }
     @include desktop {
       width: 18rem;
     }
@@ -169,7 +203,10 @@
   &__list--text {
     color: $bandsite-black;
     font-family: $font-regular;
-    padding: 1.5rem 0 2rem 0;
+    @include tablet {
+      width: 18rem;
+      padding: 0;
+    }
     @include desktop {
       width: 18rem;
     }
@@ -188,11 +225,11 @@
       cursor: pointer;
     }
     @include tablet {
-      width: 20%;
+      width: 20rem;
     }
 
     @include desktop {
-      width: 20%;
+      width: 20rem;
     }
   }
 }

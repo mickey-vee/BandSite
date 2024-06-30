@@ -57,10 +57,11 @@
 @media screen and (min-width: 1280px) {
   .hero {
     height: 75rem;
-    padding: 0;
+    padding: 0 12rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 }
 .hero__text {
@@ -125,13 +126,31 @@
 }
 @media screen and (min-width: 1280px) {
   .hero__iframe {
-    width: 50rem;
+    width: 42rem;
   }
 }
 
 .shows {
   padding: 1.6rem;
   font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    padding: 0 3.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 12rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__wrapper {
+    width: 70%;
+  }
 }
 .shows__title {
   font-size: 4rem;
@@ -147,7 +166,9 @@
 @media screen and (min-width: 768px) {
   .shows__list {
     display: flex;
-    gap: 12rem;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -169,16 +190,25 @@
 @media screen and (min-width: 768px) {
   .shows__list1 {
     display: flex;
-    width: 60%;
-    gap: 20rem;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__list1 {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    padding: 5rem 0 2rem 0;
   }
+}
+.shows__list-date1, .shows__list-venue1, .shows__list-location1 {
+  color: #afafaf;
+  width: 18rem;
+}
+.shows__blank {
+  visibility: hidden;
+  width: 20rem;
 }
 .shows__list-date, .shows__list-venue, .shows__list-location {
   padding: 1rem 0;
@@ -190,15 +220,16 @@
     display: none;
   }
 }
-@media screen and (min-width: 1280px) {
-  .shows__list-date, .shows__list-venue, .shows__list-location {
-    display: none;
-  }
-}
 .shows__list-date--text {
   font-family: "Avenir Next demi";
   color: #323232;
   padding: 1.5rem 0 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__list-date--text {
+    width: 18rem;
+    padding: 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .shows__list-date--text {
@@ -208,7 +239,12 @@
 .shows__list--text {
   color: #323232;
   font-family: "Avenir Next Regular";
-  padding: 1.5rem 0 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__list--text {
+    width: 18rem;
+    padding: 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .shows__list--text {
@@ -230,11 +266,11 @@
 }
 @media screen and (min-width: 768px) {
   .shows__button {
-    width: 20%;
+    width: 20rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__button {
-    width: 20%;
+    width: 20rem;
   }
 }/*# sourceMappingURL=shows.css.map */
