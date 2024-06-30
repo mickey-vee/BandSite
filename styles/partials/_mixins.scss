@@ -57,6 +57,10 @@
     margin: 0;
     list-style: none;
   }
+
+  iframe {
+    border: none;
+  }
 }
 
 @mixin font-faces {

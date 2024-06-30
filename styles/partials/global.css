@@ -47,6 +47,10 @@ ul {
   list-style: none;
 }
 
+iframe {
+  border: none;
+}
+
 /* navigation */
 .navigation {
   display: flex;
