@@ -323,7 +323,7 @@
 .comments__name, .comments__text {
   width: 100%;
   border: 1px solid #afafaf;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   margin: 1rem 0 2rem 0;
   background-color: #fafafa;
   padding: 1.5rem;
@@ -349,7 +349,7 @@
   width: 100%;
   height: 5rem;
   background-color: #323232;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   color: #ffffff;
   font-family: "Avenir Next demi";
   font-size: 2rem;
