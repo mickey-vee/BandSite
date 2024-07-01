@@ -35,12 +35,13 @@
   }
 
   @include desktop {
-    height: 75rem;
+    height: 100vh;
     padding: 0 12rem;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    gap: 5rem;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__text {
@@ -99,14 +100,14 @@
   font-size: 2rem;
 
   @include tablet {
-    padding: 0 3.2rem;
+    padding: 4rem 3.2rem;
   }
 
   @include desktop {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 12rem;
+    padding: 5rem 12rem;
   }
 
   &__wrapper {
@@ -123,7 +124,7 @@
   &__list {
     padding: 0;
     padding-bottom: 2rem;
-    border-bottom: 0.3rem solid $mercury;
+    border-bottom: 0.1rem solid $mercury;
     width: 100%;
 
     @include tablet {
@@ -138,12 +139,12 @@
       justify-content: space-between;
     }
 
-    &:active {
-      background-color: $silver;
-    }
-
     &:hover {
       background-color: $alabaster;
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $mercury;
       cursor: pointer;
     }
   }
@@ -169,6 +170,7 @@
   &__list-location1 {
     color: $silver;
     width: 18rem;
+    font-family: $font-demi;
   }
 
   &__blank {

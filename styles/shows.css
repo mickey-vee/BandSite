@@ -56,12 +56,13 @@
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 75rem;
+    height: 100vh;
     padding: 0 12rem;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    gap: 5rem;
     align-items: center;
-    justify-content: space-between;
   }
 }
 .hero__text {
@@ -136,7 +137,7 @@
 }
 @media screen and (min-width: 768px) {
   .shows {
-    padding: 0 3.2rem;
+    padding: 4rem 3.2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -144,7 +145,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 12rem;
+    padding: 5rem 12rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -160,7 +161,7 @@
 .shows__list {
   padding: 0;
   padding-bottom: 2rem;
-  border-bottom: 0.3rem solid #e1e1e1;
+  border-bottom: 0.1rem solid #e1e1e1;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -177,11 +178,12 @@
     justify-content: space-between;
   }
 }
-.shows__list:active {
-  background-color: #afafaf;
-}
 .shows__list:hover {
   background-color: #fafafa;
+  cursor: pointer;
+}
+.shows__list:active {
+  background-color: #e1e1e1;
   cursor: pointer;
 }
 .shows__list1 {
@@ -205,6 +207,7 @@
 .shows__list-date1, .shows__list-venue1, .shows__list-location1 {
   color: #afafaf;
   width: 18rem;
+  font-family: "Avenir Next demi";
 }
 .shows__blank {
   visibility: hidden;
