@@ -150,7 +150,7 @@
 }
 @media screen and (min-width: 1280px) {
   .shows__wrapper {
-    width: 70%;
+    width: 75%;
   }
 }
 .shows__title {
@@ -214,9 +214,9 @@
   width: 20rem;
 }
 .shows__list-date, .shows__list-venue, .shows__list-location {
-  padding: 1rem 0;
   color: #afafaf;
   font-family: "Avenir Next demi";
+  padding: 1.6rem 0;
 }
 @media screen and (min-width: 768px) {
   .shows__list-date, .shows__list-venue, .shows__list-location {
@@ -226,7 +226,7 @@
 .shows__list-date--text {
   font-family: "Avenir Next demi";
   color: #323232;
-  padding: 1.5rem 0 2rem 0;
+  padding-bottom: 1.6rem;
 }
 @media screen and (min-width: 768px) {
   .shows__list-date--text {
@@ -242,6 +242,7 @@
 .shows__list--text {
   color: #323232;
   font-family: "Avenir Next Regular";
+  padding-bottom: 1.6rem;
 }
 @media screen and (min-width: 768px) {
   .shows__list--text {
