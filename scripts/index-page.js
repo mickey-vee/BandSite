@@ -19,22 +19,6 @@ const commentArray = [
   },
 ];
 
-/* form function */
-document.addEventListener("DOMContentLoaded", (event) => {
-  const form = document.getElementById("form");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const comment = document.getElementById("comment").value;
-
-    console.log(name + comment);
-
-    form.reset();
-  });
-});
-
 /* function to create class */
 
 const elementClassAppend = (element, className, parentElement) => {
@@ -51,9 +35,51 @@ const elementClassTextAppend = (element, className, text, parentElement) => {
   parentElement.appendChild(newElement);
 };
 
-const commentSection = document.querySelector(".comments");
+/* generate date */
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, "0");
+let mm = String(today.getMonth() + 1).padStart(2, "0");
+let yyyy = today.getFullYear();
+today = mm + "/" + dd + "/" + yyyy;
 
-console.log(commentSection);
+/* form function */
+document.addEventListener("DOMContentLoaded", (event) => {
+  const form = document.getElementById("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    const comments = document.createElement("div");
+    comments.classList.add("comments__wrapper");
+
+    const commentImage = document.createElement("div");
+    commentImage.classList.add("comments__image");
+    comments.appendChild(commentImage);
+
+    const commentOld = document.createElement("div");
+    commentOld.classList.add("comments__old-wrapper");
+    comments.appendChild(commentOld);
+
+    const commentNameDate = document.createElement("div");
+    commentNameDate.classList.add("comments__name-date");
+    commentOld.appendChild(commentNameDate);
+
+    elementClassTextAppend("h4", "comments__old-name", name, commentNameDate);
+    elementClassTextAppend("h4", "comments__old-date", today, commentNameDate);
+    elementClassTextAppend("p", "comments__old-text", comment, commentOld);
+
+    const formSection = document.querySelector(".form-comments");
+
+    formSection.insertBefore(comments, commentSection.firstChild);
+
+    form.reset();
+  });
+});
+
+const commentSection = document.querySelector(".form-comments");
 
 commentArray.forEach(function (comment) {
   const comments = document.createElement("div");
