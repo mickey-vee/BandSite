@@ -34,7 +34,7 @@
   width: 100%;
   padding: 1.6rem 0;
 
-  &--links {
+  &__links {
     color: #e1e1e1;
     font-size: 2rem;
     line-height: 3.2rem;
@@ -46,7 +46,7 @@
     }
   }
 
-  &--links.active {
+  &__links--active {
     color: #ffffff;
     font-weight: bold;
     border-bottom: solid 0.4rem white;
@@ -56,7 +56,7 @@
     }
   }
 
-  &--links:hover {
+  &__links:hover {
     color: #ffffff;
     border-bottom: solid 0.4rem white;
     width: 100%;

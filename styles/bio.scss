@@ -1,5 +1,6 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
+@use ".partials/fonts" as *;
 
 /* fonts */
 @include font-faces;
@@ -35,7 +36,7 @@
 
   &__title {
     align-content: center;
-    color: $white;
+    color: $primary;
     padding-left: 1.6rem;
     @include page-header;
     z-index: 2;
@@ -55,7 +56,7 @@
   padding: 0 1.6rem;
   &__title {
     @include mobile-heading-pad;
-    color: $bandsite-black;
+    color: $primary-black;
     font-size: 4rem;
     font-family: $font-demi;
     @include tablet {
@@ -77,7 +78,7 @@
     }
   }
   &__quote {
-    color: $bandsite-black;
+    color: $primary-black;
     @include section-header;
     padding: 1.6rem 0;
     @include tablet {
@@ -91,7 +92,7 @@
     }
   }
   &__quote--author {
-    color: $bandsite-black;
+    color: $primary-black;
     @include section-header;
     @include tablet {
       padding: 0 6rem 6rem 6rem;
@@ -141,7 +142,7 @@
 
 /* gallery styling */
 .gallery {
-  background-color: $alabaster;
+  background-color: $highlight;
   padding: 0 1.6rem;
   &__title {
     @include page-header;
@@ -210,7 +211,7 @@
     display: flex;
     justify-content: space-around;
     max-width: 100%;
-    border-bottom: 0.1rem solid $mercury;
+    border-bottom: 0.1rem solid $border;
   }
 
   &__image {
@@ -237,7 +238,7 @@
 
   &__label {
     text-transform: uppercase;
-    color: $silver;
+    color: $label;
     font-family: $font-demi;
 
     @include tablet {
@@ -248,14 +249,15 @@
   &__name,
   &__text {
     width: 100%;
-    border: 1px solid $silver;
+    border: 1px solid $label;
     border-radius: 0.4rem;
     margin: 1rem 0 2rem 0;
-    background-color: $alabaster;
+    background-color: $highlight;
     padding: 1.5rem;
-    color: $bandsite-black;
+    color: $primary-black;
+    resize: none;
     &::placeholder {
-      color: $bandsite-black;
+      color: $primary-black;
       font-family: $font-regular;
       font-size: 1.8rem;
     }
@@ -270,13 +272,13 @@
   &__submit {
     width: 100%;
     height: 5rem;
-    background-color: $bandsite-black;
+    background-color: $primary-black;
     border-radius: 0.4rem;
-    color: $white;
+    color: $primary;
     font-family: $font-demi;
     font-size: 2rem;
     &:hover {
-      background-color: $bandsite-black;
+      background-color: $primary-black;
       cursor: pointer;
     }
     @include tablet {
@@ -285,7 +287,7 @@
   }
 
   &__old-image {
-    background-color: $mercury;
+    background-color: $border;
     margin-top: 1rem;
     width: 3.6rem;
     height: 3.6rem;
@@ -320,7 +322,7 @@
     font-weight: 200;
 
     padding: 1rem 0;
-    color: $silver;
+    color: $label;
   }
   &__old-text {
     @include body-copy;
@@ -334,8 +336,8 @@
 /* footer styling */
 .footer {
   padding: 0 1.6rem;
-  background-color: $bandsite-black;
-  color: $white;
+  background-color: $primary-black;
+  color: $primary;
   position: relative;
 
   &__title {
@@ -388,7 +390,7 @@
   }
 
   &__company-email-link {
-    color: $white;
+    color: $primary;
   }
 
   &__logo {

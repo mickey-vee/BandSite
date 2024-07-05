@@ -328,6 +328,7 @@
   background-color: #fafafa;
   padding: 1.5rem;
   color: #323232;
+  resize: none;
 }
 .comments__name::-moz-placeholder, .comments__text::-moz-placeholder {
   color: #323232;

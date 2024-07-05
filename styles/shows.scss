@@ -1,5 +1,6 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
+@use "./partials/fonts" as *;
 
 /* fonts */
 @include font-faces;
@@ -52,7 +53,7 @@
   }
 
   &__album {
-    color: $white;
+    color: $primary;
     font-size: 3rem;
     @include tablet {
       @include desktop-page-header;
@@ -66,7 +67,7 @@
   }
 
   &__title {
-    color: $white;
+    color: $primary;
     width: 70%;
     padding: 4rem 0;
     @include page-header;
@@ -124,7 +125,7 @@
   &__list {
     padding: 0;
     padding-bottom: 2rem;
-    border-bottom: 0.1rem solid $mercury;
+    border-bottom: 0.1rem solid $border;
     width: 100%;
 
     @include tablet {
@@ -140,11 +141,11 @@
     }
 
     &:hover {
-      background-color: $alabaster;
+      background-color: $highlight;
       cursor: pointer;
     }
     &:active {
-      background-color: $mercury;
+      background-color: $border;
       cursor: pointer;
     }
   }
@@ -168,7 +169,7 @@
   &__list-date1,
   &__list-venue1,
   &__list-location1 {
-    color: $silver;
+    color: $label;
     width: 18rem;
     font-family: $font-demi;
   }
@@ -181,7 +182,7 @@
   &__list-date,
   &__list-venue,
   &__list-location {
-    color: $silver;
+    color: $label;
     font-family: $font-demi;
     padding: 1.6rem 0;
     @include tablet {
@@ -191,7 +192,7 @@
 
   &__list-date--text {
     font-family: $font-demi;
-    color: $bandsite-black;
+    color: $primary-black;
     padding-bottom: 1.6rem;
     @include tablet {
       width: 18rem;
@@ -203,7 +204,7 @@
   }
 
   &__list--text {
-    color: $bandsite-black;
+    color: $primary-black;
     font-family: $font-regular;
     padding-bottom: 1.6rem;
     @include tablet {
@@ -218,13 +219,13 @@
   &__button {
     width: 100%;
     height: 6rem;
-    background-color: $bandsite-black;
+    background-color: $primary-black;
     border-radius: 0.5rem;
-    color: $white;
+    color: $primary;
     font-family: $font-demi;
     font-size: 2rem;
     &:hover {
-      background-color: $bandsite-black;
+      background-color: $primary-black;
       cursor: pointer;
     }
     @include tablet {

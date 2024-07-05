@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         Name: name,
         Date: today,
         Comment: comment,
-        ImageClass: "comments__image",
+        ImageClass: "comments__old-image",
       };
       commentArray.unshift(newComment);
       renderComments(commentArray);

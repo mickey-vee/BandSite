@@ -24,9 +24,6 @@ body {
   font-size: 1rem;
   font-family: "Avenir Next Regular", sans-serif;
   margin: 0 1.6rem;
-  /*     @include desktop {
-    margin: auto;
-  } */
 }
 @media screen and (min-width: 768px) {
   body {
@@ -85,7 +82,7 @@ iframe {
   width: 100%;
   padding: 1.6rem 0;
 }
-.navigation-item--links {
+.navigation-item__links {
   color: #e1e1e1;
   font-size: 2rem;
   line-height: 3.2rem;
@@ -93,22 +90,22 @@ iframe {
   transition: 0.1s;
 }
 @media screen and (min-width: 768px) {
-  .navigation-item--links {
+  .navigation-item__links {
     margin-right: 6rem;
   }
 }
-.navigation-item--links.active {
+.navigation-item__links--active {
   color: #ffffff;
   font-weight: bold;
   border-bottom: solid 0.4rem white;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .navigation-item--links.active {
+  .navigation-item__links--active {
     margin-top: 5rem;
   }
 }
-.navigation-item--links:hover {
+.navigation-item__links:hover {
   color: #ffffff;
   border-bottom: solid 0.4rem white;
   width: 100%;
