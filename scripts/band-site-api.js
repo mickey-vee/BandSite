@@ -1,7 +1,3 @@
-/*    "api_key": "f2db11a6-a4e5-44d7-b2f5-65ce233efbf8"*/
-
-/* https://unit-2-project-api-25c1595833b2.herokuapp.com/comments/?api_key=f2db11a6-a4e5-44d7-b2f5-65ce233efbf8 */
-
 const apiKey = "f2db11a6-a4e5-44d7-b2f5-65ce233efbf8";
 
 class BandSiteApi {
@@ -18,7 +14,6 @@ class BandSiteApi {
           comment: comment,
         }
       );
-      console.log(response.data);
     } catch (e) {
       console.log(e);
     }
@@ -31,8 +26,6 @@ class BandSiteApi {
       );
       const comments = response.data;
 
-      console.log(response.data);
-
       return response.data;
     } catch (e) {
       console.log(e);
@@ -44,7 +37,6 @@ class BandSiteApi {
       const response = await axios.get(
         `${this.baseUrl}showdates?api_key=${this.apiKey}`
       );
-      console.log(response.data);
 
       return response.data;
     } catch (e) {
@@ -55,7 +47,6 @@ class BandSiteApi {
 
 const api = new BandSiteApi(apiKey);
 
-/* 
-api.postComment("testName", "test"); */
 api.getComments();
-api.getShows();
+
+export default BandSiteApi;
