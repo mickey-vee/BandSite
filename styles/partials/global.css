@@ -5,7 +5,6 @@
 /* desktop & tablet text styles */
 /* mobile text style */
 /* padding */
-/* global styles */
 *,
 *::before,
 *::after {
@@ -48,7 +47,6 @@ iframe {
   border: none;
 }
 
-/* navigation */
 .navigation {
   display: flex;
   flex-direction: column;
@@ -97,7 +95,7 @@ iframe {
 .navigation-item__links--active {
   color: #ffffff;
   font-weight: bold;
-  border-bottom: solid 0.4rem white;
+  border-bottom: solid 0.4rem #ffffff;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -107,7 +105,7 @@ iframe {
 }
 .navigation-item__links:hover {
   color: #ffffff;
-  border-bottom: solid 0.4rem white;
+  border-bottom: solid 0.4rem #ffffff;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -116,7 +114,6 @@ iframe {
   }
 }
 
-/* footer styling */
 .footer {
   padding: 0 1.6rem;
   background-color: #323232;

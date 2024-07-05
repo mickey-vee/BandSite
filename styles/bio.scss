@@ -1,8 +1,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
-@use ".partials/fonts" as *;
+@use "./partials/fonts" as *;
 
-/* fonts */
 @include font-faces;
 
 /* hero */
