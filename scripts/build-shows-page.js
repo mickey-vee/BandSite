@@ -3,12 +3,20 @@ import BandSiteApi from "../scripts/band-site-api.js";
 const apiKey = "f2db11a6-a4e5-44d7-b2f5-65ce233efbf8";
 const api = new BandSiteApi(apiKey);
 
+const formatDate = (date) => {
+  let dd = String(date.getDate()).padStart(2, "0");
+  let mm = String(date.getMonth() + 1).padStart(2, "0");
+  let yyyy = date.getFullYear();
+  return mm + "/" + dd + "/" + yyyy;
+};
+
 async function showsApi() {
   try {
     const showData = await api.getShows();
     const shows = showData.map((show) => {
+      const formattedDate = formatDate(new Date(show.date));
       return {
-        showDate: new Date(show.date).toLocaleDateString(),
+        showDate: formattedDate,
         showVenue: show.place,
         showLocation: show.location,
       };

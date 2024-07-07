@@ -4,17 +4,26 @@ const api = new BandSiteApi(apiKey);
 
 let commentArray = [];
 
+const formatDate = (date) => {
+  let dd = String(date.getDate()).padStart(2, "0");
+  let mm = String(date.getMonth() + 1).padStart(2, "0");
+  let yyyy = date.getFullYear();
+  return mm + "/" + dd + "/" + yyyy;
+};
+
 async function commentsApi() {
   try {
     const commentData = await api.getComments();
     commentArray = commentData.map((comment) => {
+      const commentDate = new Date(comment.timestamp);
       return {
         Name: comment.name,
-        Date: new Date(comment.timestamp).toLocaleDateString(),
+        Date: formatDate(commentDate),
         Comment: comment.comment,
-        ImageClass: "comments__old-image",
+        Timestamp: commentDate.getTime(),
       };
     });
+    commentArray.sort((a, b) => b.Timestamp - a.Timestamp);
     return commentArray;
   } catch (e) {
     console.log(e);
@@ -33,10 +42,8 @@ const elementClassTextAppend = (element, className, text, parentElement) => {
 
 /* generate date */
 let today = new Date();
-let dd = String(today.getDate());
-let mm = String(today.getMonth() + 1);
-let yyyy = today.getFullYear();
-today = mm + "/" + dd + "/" + yyyy;
+let formattedToday = formatDate(today);
+let todayTimestamp = today.getTime();
 
 /* function for comments */
 function renderApiComments(commentArray) {
@@ -50,7 +57,7 @@ const renderComments = (comments) => {
     commentsWrapper.classList.add("comments__wrapper");
 
     const commentImage = document.createElement("div");
-    commentImage.classList.add(comment.ImageClass);
+    commentImage.classList.add("comments__old-image");
     commentsWrapper.appendChild(commentImage);
 
     const commentOld = document.createElement("div");
@@ -89,7 +96,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const nameInput = document.querySelector(".comments__name");
   const commentInput = document.querySelector(".comments__text");
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     const name = nameInput.value.trim();
     const comment = commentInput.value.trim();
@@ -105,15 +112,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     } else if (comment === "") {
       commentInput.classList.add("comments__required");
     } else {
-      const newComment = {
-        Name: name,
-        Date: today,
-        Comment: comment,
-        ImageClass: "comments__old-image",
-      };
-      commentArray.unshift(newComment);
-      renderComments(commentArray);
-      form.reset();
+      try {
+        const newComment = await api.postComment(name, comment);
+        commentArray.unshift({
+          Name: name,
+          Date: formattedToday,
+          Comment: comment,
+          Timestamp: todayTimestamp,
+        });
+        commentArray.sort((a, b) => b.Timestamp - a.Timestamp);
+        renderComments(commentArray);
+        form.reset();
+      } catch (e) {
+        console.error("Error posting comment:", e);
+      }
     }
   });
 

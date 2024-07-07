@@ -47,6 +47,7 @@ class BandSiteApi {
 
 const api = new BandSiteApi(apiKey);
 
-api.getComments();
+api.getComments(); /* 
+api.postComment("test", "123"); */
 
 export default BandSiteApi;
